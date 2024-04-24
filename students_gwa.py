@@ -1,3 +1,4 @@
+
 # Read student names and GWAs from file
 with open("student_gwa.txt", "r") as file:
     lines = file.readlines()
@@ -10,10 +11,9 @@ lowest_gwa = 5.00
 highest_student = None
 lowest_student = None
 
-# Enumarate through student GWAs to find the highest and lowest
 for student, gwa in students_gwas:
     gwa = float(gwa)
-    if gwa > highest_gwa:
+    if gwa > highest_gwa: 
         highest_gwa = gwa
         highest_student = (student, gwa)
     if gwa < lowest_gwa:
