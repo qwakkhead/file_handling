@@ -1,3 +1,5 @@
+from fancify_text import blue
+from fancify_text import script
 
 # Read student names and GWAs from file
 with open("student_gwa.txt", "r") as file:
@@ -22,16 +24,16 @@ for student, gwa in students_gwas:
 
 # Output the student with the highest GWA
 if highest_student:
-    print("Student with the highest GWA:")
-    print(f"Name: {highest_student[0]}")
-    print(f"GWA: {highest_student[1]}")
+    print(script("Student with the lowest GWA:"))
+    print(blue(f"Name: {highest_student[0]}"))
+    print(blue(f"GWA: {highest_student[1]}"))
 else:
-    print("No student found with the highest GWA.")
+    print("No student found with the lowest GWA.")
 
 # Output the student with the lowest GWA
 if lowest_student:
-    print("\nStudent with the lowest GWA:")
-    print(f"Name: {lowest_student[0]}")
-    print(f"GWA: {lowest_student[1]}")
+    print(script("\nStudent with the highest GWA:"))
+    print(blue(f"Name: {lowest_student[0]}"))
+    print(blue(f"GWA: {lowest_student[1]}"))
 else:
-    print("No student found with the lowest GWA.")
+    print("No student found with the highest GWA.")
